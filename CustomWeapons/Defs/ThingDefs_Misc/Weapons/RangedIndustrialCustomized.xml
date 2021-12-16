@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+
   =====================Pistol=====================
+
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_AutopistolCustomized</defName>
-    <label>autopistol customized</label>
+    <label>autopistol csutomized</label>
     <description>An ancient pattern blowback-operated self-loading pistol. It lacks stopping power and range, but is quick to fire.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/AutopistolCustomized</texPath>
@@ -15,24 +17,24 @@
     <recipeMaker>
       <researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
     <statBases>
-      <WorkToMake>5000</WorkToMake>
-      <Mass>1.2</Mass>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>1.3</Mass>
       <AccuracyTouch>0.90</AccuracyTouch>
       <AccuracyShort>0.80</AccuracyShort>
-      <AccuracyMedium>0.40</AccuracyMedium>
-      <AccuracyLong>0.30</AccuracyLong>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
       <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
     <costList>
       <Steel>30</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Gun_Autopistol>1</Gun_Autopistol>
     </costList>
     <verbs>
       <li>
@@ -40,7 +42,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_Autopistol</defaultProjectile>
         <warmupTime>0.3</warmupTime>
-        <range>25.9</range>
+        <range>30.9</range>
         <soundCast>Shot_Autopistol</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -81,32 +83,110 @@
   </ThingDef>
 
 
+  =====================Action Rifle=====================
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_BoltActionRifleCustomized</defName>
+    <label>bolt-action rifle customized</label>
+    <description>An ancient pattern bolt-action rifle. With its long range, and low fire rate, it is unlikely to drive animals to revenge, which makes it a favorite weapon for hunting.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/BoltActionRifleCustomized</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>3.6</Mass>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>1.1</AccuracyShort>
+      <AccuracyMedium>1.1</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <Gun_BoltActionRifle>1</Gun_BoltActionRifle>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BoltActionRifle</defaultProjectile>
+        <warmupTime>1.7</warmupTime>
+        <range>36.9</range>
+        <soundCast>Shot_BoltActionRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_BoltActionRifle</defName>
+    <label>bolt-action rifle bullet</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>70</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+
   =====================Shotgun====================
+
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_PumpShotgunCustomized</defName>
     <label>pump shotgun customized</label>
-    <description>More damage, more precision and more range for you shotgun.</description>
+    <description>An ancient design of shotgun that emits a tight-packed spray of pellets. Deadly, but short range.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/PumpShotgunCustomized</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Shotgun</soundInteract>
     <statBases>
-      <WorkToMake>5000</WorkToMake>
-      <Mass>3.9</Mass>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>3.4</Mass>
       <AccuracyTouch>0.90</AccuracyTouch>
-      <AccuracyShort>0.90</AccuracyShort>
-      <AccuracyMedium>0.80</AccuracyMedium>
-      <AccuracyLong>0.72</AccuracyLong>
+      <AccuracyShort>0.97</AccuracyShort>
+      <AccuracyMedium>0.87</AccuracyMedium>
+      <AccuracyLong>0.74</AccuracyLong>
       <RangedWeapon_Cooldown>1.10</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>20</Steel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <Steel>30</Steel>
+      <Gun_PumpShotgun>1</Gun_PumpShotgun>
     </costList>
     <recipeMaker>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
     </recipeMaker>
     <verbs>
@@ -115,7 +195,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_Shotgun</defaultProjectile>
         <warmupTime>0.9</warmupTime>
-        <range>20.5</range>
+        <range>15.9</range>
         <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -128,7 +208,7 @@
           <li>Blunt</li>
         </capacities>
         <power>9</power>
-        <cooldownTime>1.5</cooldownTime>
+        <cooldownTime>2</cooldownTime>
       </li>
       <li>
         <label>barrel</label>
@@ -136,8 +216,8 @@
           <li>Blunt</li>
           <li>Poke</li>
         </capacities>
-        <power>12</power>
-        <cooldownTime>1.5</cooldownTime>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
       </li>
     </tools>
   </ThingDef>
@@ -158,13 +238,94 @@
     </projectile>
   </ThingDef>
 
-  =====================Action Rifle=====================
 
+  ===================== LMG =====================
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_LMGCustomized</defName>
+    <label>LMG customized</label>
+    <description>A gas-operated light machine gun. While it is somewhat unwieldy and inaccurate, its long bursts of fire are effective against groups of enemies.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/LMGCustomized</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>8.4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.58</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <Gun_LMG>1</Gun_LMG>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_LMG</defaultProjectile>
+        <warmupTime>1.8</warmupTime>
+        <range>25.9</range>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_LMG</defName>
+    <label>LMG bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>46</speed>
+    </projectile>
+  </ThingDef>
   =====================Assault Rifle=====================
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_AssaultRifleCustomized</defName>
-    <label>assault rifle</label>
+    <label>assault rifle customized</label>
     <description>A general-purpose gas-operated assault rifle for field or urban combat. It has good range, decent power, and good accuracy.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifleCustomized</texPath>
@@ -179,18 +340,17 @@
     </recipeMaker>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
-      <WorkToMake>2500</WorkToMake>
-      <Mass>3.5</Mass>
-      <AccuracyTouch>0.70</AccuracyTouch>
-      <AccuracyShort>0.80</AccuracyShort>
-      <AccuracyMedium>0.75</AccuracyMedium>
-      <AccuracyLong>0.65</AccuracyLong>
-      <RangedWeapon_Cooldown>1.50</RangedWeapon_Cooldown>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>3.6</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Gun_AssaultRifle>1</Gun_AssaultRifle>
       <Steel>30</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Gun_AssaultRifle>1</Gun_AssaultRifle>
     </costList>
     <verbs>
       <li>
@@ -198,7 +358,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
         <warmupTime>1.0</warmupTime>
-        <range>35.9</range>
+        <range>30.9</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_AssaultRifle</soundCast>
