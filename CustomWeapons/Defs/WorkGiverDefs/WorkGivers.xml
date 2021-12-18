@@ -10,7 +10,7 @@
     <workType>Smithing</workType>
     <priorityInType>115</priorityInType>
     <fixedBillGiverDefs>
-      <li>CustomizeWeaponsBench</li>
+      <li>WeaponsCustomizationBench</li>
     </fixedBillGiverDefs>
     <verb>smith</verb>
     <gerund>smithing at</gerund>
