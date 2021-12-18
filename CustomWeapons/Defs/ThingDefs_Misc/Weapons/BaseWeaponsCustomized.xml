@@ -8,7 +8,7 @@
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
-        <li>CustomizeWeaponsBench</li>
+        <li>WeaponsCustomizationBench</li>
       </recipeUsers>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
       <researchPrerequisite>Gunsmithing</researchPrerequisite>

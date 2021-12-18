@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs> 
   <ThingDef ParentName="BenchBase">
-    <defName>CustomizeWeaponsBench</defName>
-    <label>customize weapons table</label>
+    <defName>WeaponsCustomizationBench</defName>
+    <label>Weapons Customization Bench</label>
     <description>A work station for assembling machinery like guns and ammunition, or breaking down dead mechanoids.</description>
     <thingClass>Building_WorkTable</thingClass>
     <graphicData>
-      <texPath>Things/Building/Production/CustomizeWeaponsBench</texPath>
+      <texPath>Things/Building/Production/WeaponsCustomizationBench</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3.5,1.5)</drawSize>
       <damageData>

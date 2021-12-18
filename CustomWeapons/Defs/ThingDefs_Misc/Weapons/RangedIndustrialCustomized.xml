@@ -7,7 +7,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_AutopistolCustomized</defName>
     <label>autopistol csutomized</label>
-    <description>An ancient pattern blowback-operated self-loading pistol. It lacks stopping power and range, but is quick to fire.</description>
+    <description>A custom pistol with more range and accuracy.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/AutopistolCustomized</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -88,7 +88,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_BoltActionRifleCustomized</defName>
     <label>bolt-action rifle customized</label>
-    <description>An ancient pattern bolt-action rifle. With its long range, and low fire rate, it is unlikely to drive animals to revenge, which makes it a favorite weapon for hunting.</description>
+    <description>Custom Bolt-Action Rifle with more range and less cooldown.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/BoltActionRifleCustomized</texPath>
       <graphicClass>Graphic_Single</graphicClass>
